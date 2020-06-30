@@ -1,0 +1,11 @@
+<%= form_for Student.new, method: 'get' do |s| %>
+  <%= s.label :name, 'Search for a Student' %>
+  <%= s.text_field :name %>
+  <%= s.submit 'Search' %>
+<% end %>
+
+<br><br>
+
+<% @students.each do |student| %>
+  <%= render 'student', student: student %>
+<% end %>
